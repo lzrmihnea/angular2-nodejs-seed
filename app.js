@@ -10,7 +10,8 @@ var appRoutes = require('./routes/app');
 
 var app = express();
 
-mongoose.connect('localhost:27017/node-ng2-seed');
+mongoose.connect('localhost:27017/test');
+// mongoose.connect('localhost:27017/node-ng2-seed');
 
 
 // view engine setup
