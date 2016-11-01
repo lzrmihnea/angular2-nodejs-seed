@@ -1,9 +1,23 @@
 var express = require('express');
 var router = express.Router();
 var Message = require('../models/message');
+var Posts = require('../models/blogPost');
 
 router.get('/', function(req, res, next) {
     res.render('index');
+});
+
+router.get('/posts', function(req, res,next){
+    Posts.find(function(err, posts){
+       if(err) {
+           return res.status(500).json({ 
+               message: 'Error while fetching posts!'
+           });
+       } 
+        res.status(200).json({
+            data: posts
+        });
+    });
 });
 
 router.get('/messages', function(req, res, next){
