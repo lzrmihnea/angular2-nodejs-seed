@@ -9,7 +9,7 @@ export class PostService {
     constructor(private _http: Http){ }
 
     getPosts(): Observable<any>{
-        return this._http.get('http://localhost:3000/messages')
+        return this._http.get('http://localhost:3000/posts')
             .map( (data:Response) => {
                 
                 console.log('here we are');
@@ -20,10 +20,11 @@ export class PostService {
                 for(let p of extracted.data) {
 
                     // TODO
-                    posts.push(new Post(p.content));
+                    posts.push(new Post(p.title,
+                                        p.body,
+                                        p.author));
 
 
-                    console.log(p.content);
                 }
                 return posts;
             });
