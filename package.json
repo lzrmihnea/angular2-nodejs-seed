@@ -1,5 +1,5 @@
 {
-  "name": "udemy-nodejs-angular2",
+  "name": "mean-blog-02",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -23,7 +23,9 @@
     "debug": "~2.2.0",
     "es6-shim": "^0.35.0",
     "express": "~4.13.1",
+    "express-mongoose": "^0.1.0",
     "hbs": "~3.1.0",
+    "moment": "^2.15.2",
     "mongoose": "^4.6.5",
     "morgan": "~1.6.1",
     "reflect-metadata": "^0.1.3",
