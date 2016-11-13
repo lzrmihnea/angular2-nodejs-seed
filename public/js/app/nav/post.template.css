@@ -1,0 +1,10 @@
+#postTitle {
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#postBody {
+    font-size: 1em;
+}

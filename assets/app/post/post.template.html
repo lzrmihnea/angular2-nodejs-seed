@@ -1,8 +1,11 @@
 <article *ngFor="let post of posts">
     <div>
-        <h1><b>{{ post.title }}</b></h1>
-        <div>
-            {{ post.body }}
-        </div>
+        <div id="postTitle">{{ post.title }}</div>
+        <!--<div [innerHTML]="post.body">-->
+            <!--{{ post.body }}-->
+        <!--</div>-->
+        <br/>
+        <div id="postBody">{{ post.body }}</div>
+        <br/><br/><br/><br/>
     </div>
 </article>

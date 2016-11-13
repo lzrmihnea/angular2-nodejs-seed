@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Post } from "./post.model";
 import { PostService } from "./post.service";
 
@@ -6,6 +6,7 @@ import { PostService } from "./post.service";
     moduleId: module.id,
     selector: 'posts',
     templateUrl: 'post.template.html',
+    styleUrls: ['post.template.css'],
     providers: [ PostService ]
 })
 
@@ -13,7 +14,7 @@ export class PostComponent implements OnInit {
     posts: Post[];
 
     constructor(private _postService : PostService) { }
-    
+
     ngOnInit() {
         this._postService.getPosts()
             .subscribe(
@@ -21,7 +22,7 @@ export class PostComponent implements OnInit {
                 error => console.error(error)
             );
     }
-
+    
     // createPost() {
     //     const post = new Post(rnd + ' is good!');
     //     this.posts.push(post);
